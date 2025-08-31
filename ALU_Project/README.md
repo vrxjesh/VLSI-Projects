@@ -1,19 +1,40 @@
 # 4-bit ALU Design in Verilog
 
-## Description
-This project implements a 4-bit Arithmetic Logic Unit (ALU) supporting:
-- ADD, SUB, AND, OR, XOR
-- SHIFT LEFT, SHIFT RIGHT
+## Project Overview
+This project implements a **4-bit Arithmetic Logic Unit (ALU)** using **Verilog HDL**.  
+The ALU supports both **arithmetic** and **logic operations**, which are fundamental components of digital systems and microprocessors.
+
+### Supported Operations
+| Opcode | Operation        |
+|--------|----------------|
+| 000    | ADD             |
+| 001    | SUB             |
+| 010    | AND             |
+| 011    | OR              |
+| 100    | XOR             |
+| 101    | SHIFT LEFT      |
+| 110    | SHIFT RIGHT     |
+
+---
+
+## Files Included
+- `alu.v` → ALU RTL design  
+- `alu_tb.v` → Testbench for simulation  
+- `alu.vcd` → Waveform file generated from simulation (optional)  
+- `README.md` → Project description  
+
+---
 
 ## Tools Used
-- Verilog (RTL Design)
-- Icarus Verilog (Simulation)
-- GTKWave (Waveform viewing)
+- **Verilog HDL** (for design)  
+- **Icarus Verilog** (for simulation)  
+- **GTKWave** (for waveform visualization)  
+- **VS Code** (editor with Verilog extensions)  
 
-## Simulation
-Waveforms for different operations are available in `alu.gtkw`.
+---
 
-## Instructions
-1. Compile: `iverilog -o alu_tb alu.v alu_tb.v`
-2. Simulate: `vvp alu_tb`
-3. View waveform: `gtkwave alu.vcd`
+## Simulation Instructions
+1. Compile the design and testbench:
+
+```bash
+iverilog -o alu_tb alu.v alu_tb.v
